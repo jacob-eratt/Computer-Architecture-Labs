@@ -1,0 +1,26 @@
+.orig x3000
+LEA R0 B
+LDB R1 R0 #-2
+LDB R2 R0 #-1
+LDB R3 R0 #0
+LDB R4 R0 #1
+LDB R5 R0 #2
+LDB R6 R0 #3
+HALT
+A .fill xdefa
+B .fill x6e4c
+C .fill xcab0
+.end
+
+0x3000
+0xE008
+0x223E
+0x243F
+0x2600
+0x2801
+0x2A02
+0x2C03
+0xF025
+0xDEFA
+0x6E4C
+0xCAB0

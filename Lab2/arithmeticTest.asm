@@ -1,0 +1,99 @@
+.orig x3000
+AND R2 R2 #0 ;1
+ADD R2 R2 #-1
+ADD R2 R2 xF
+AND R2 R2 #0
+LEA R2 full ;5
+LDB R3 R2 #0
+LDB R3 R2 #1
+LDW R3 R2 #0
+ADD R3 R3 #1
+ADD R3 R3 #-1 ;10
+XOR R3 R3 x1F
+XOR R4 R4 R3
+NOT R4 R4
+nop
+nop ;15
+brnzp next
+nop
+next AND R2 R2 #0
+brnz next2
+ADD R2 R2 #1
+next2 LEA R2 full
+LDW R2 R2 #0
+Brn next3
+nop
+AND R2 R2 #0
+next3 RSHFL R2 R2 #5
+brp next4
+AND R2 R2 #0
+next4 LSHF R2 R2 #15
+nop
+
+brn next5
+nop 
+AND R2 R2 #0
+next5 RSHFA R2 R2 #14
+BRn next6
+nop
+AND R2 R2 #0
+next6 RSHFL R2 R2 #1
+BRzp next7
+nop
+AND R2 R2 #0
+next7 XOR R2 R2 #5
+AND R7 R7 #0
+
+
+HALT
+full .fill 0xFFFF
+
+.end
+
+
+0x3000
+0x54A0
+0x14BF
+0x14AF
+0x54A0
+0xE427
+0x2680
+0x2681
+0x6680
+0x16E1
+0x16FF
+0x96FF
+0x9903
+0x993F
+0x0000
+0x0000
+0x0E01
+0x0000
+0x54A0
+0x0C01
+0x14A1
+0xE417
+0x6480
+0x0802
+0x0000
+0x54A0
+0xD495
+0x0201
+0x54A0
+0xD48F
+0x0000
+0x0802
+0x0000
+0x54A0
+0xD4BE
+0x0802
+0x0000
+0x54A0
+0xD491
+0x0602
+0x0000
+0x54A0
+0x94A5
+0x5FE0
+0xF025
+0xFFFF

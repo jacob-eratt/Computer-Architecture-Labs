@@ -1,0 +1,143 @@
+.orig x1000
+
+ ; SYSTEM SPACE: Pages 0–23 (Valid and Protected)
+Page0   .FILL x0004
+Page1   .FILL x0204
+Page2   .FILL x0404
+Page3   .FILL x0604
+Page4   .FILL x0804
+Page5   .FILL x0A04
+Page6   .FILL x0C04
+Page7   .FILL x0E04
+Page8   .FILL x1004
+Page9   .FILL x1204
+Page10  .FILL x1404
+Page11  .FILL x1604
+Page12  .FILL x1804
+Page13  .FILL x1A04
+Page14  .FILL x1C04
+Page15  .FILL x1E04
+Page16  .FILL x2004
+Page17  .FILL x2204
+Page18  .FILL x2404
+Page19  .FILL x2604
+Page20  .FILL x2804
+Page21  .FILL x2A04
+Page22  .FILL x2C04
+Page23  .FILL x2E04
+;USER SPACE: Pages 24–127
+ ; Pages 24, 96, and 126 are valid and unprotected,
+Page24  .FILL x320C ; PFN=25, Valid=1, Unprotected=0
+
+ ; Pages 25–95,
+Page25  .FILL x0008
+Page26  .FILL x0008
+Page27  .FILL x0008
+Page28  .FILL x0008
+Page29  .FILL x0008
+Page30  .FILL x0008
+Page31  .FILL x0008
+Page32  .FILL x0008
+Page33  .FILL x0008
+Page34  .FILL x0008
+Page35  .FILL x0008
+Page36  .FILL x0008
+Page37  .FILL x0008
+Page38  .FILL x0008
+Page39  .FILL x0008
+Page40  .FILL x0008
+Page41  .FILL x0008
+Page42  .FILL x0008
+Page43  .FILL x0008
+Page44  .FILL x0008
+Page45  .FILL x0008
+Page46  .FILL x0008
+Page47  .FILL x0008
+Page48  .FILL x0008
+Page49  .FILL x0008
+Page50  .FILL x0008
+Page51  .FILL x0008
+Page52  .FILL x0008
+Page53  .FILL x0008
+Page54  .FILL x0008
+Page55  .FILL x0008
+Page56  .FILL x0008
+Page57  .FILL x0008
+Page58  .FILL x0008
+Page59  .FILL x0008
+Page60  .FILL x0008
+Page61  .FILL x0008
+Page62  .FILL x0008
+Page63  .FILL x0008
+Page64  .FILL x0008
+Page65  .FILL x0008
+Page66  .FILL x0008
+Page67  .FILL x0008
+Page68  .FILL x0008
+Page69  .FILL x0008
+Page70  .FILL x0008
+Page71  .FILL x0008
+Page72  .FILL x0008
+Page73  .FILL x0008
+Page74  .FILL x0008
+Page75  .FILL x0008
+Page76  .FILL x0008
+Page77  .FILL x0008
+Page78  .FILL x0008
+Page79  .FILL x0008
+Page80  .FILL x0008
+Page81  .FILL x0008
+Page82  .FILL x0008
+Page83  .FILL x0008
+Page84  .FILL x0008
+Page85  .FILL x0008
+Page86  .FILL x0008
+Page87  .FILL x0008
+Page88  .FILL x0008
+Page89  .FILL x0008
+Page90  .FILL x0008
+Page91  .FILL x0008
+Page92  .FILL x0008
+Page93  .FILL x0008
+Page94  .FILL x0008
+Page95  .FILL x0008
+
+ ; Valid User Pages (Stack)
+Page96  .FILL x380C  ; PFN=28, Valid=1, Unprotected=0
+
+Page97  .FILL x0008
+Page98  .FILL x0008
+Page99  .FILL x0008
+Page100 .FILL x0008
+Page101 .FILL x0008
+Page102 .FILL x0008
+Page103 .FILL x0008
+Page104 .FILL x0008
+Page105 .FILL x0008
+Page106 .FILL x0008
+Page107 .FILL x0008
+Page108 .FILL x0008
+Page109 .FILL x0008
+Page110 .FILL x0008
+Page111 .FILL x0008
+Page112 .FILL x0008
+Page113 .FILL x0008
+Page114 .FILL x0008
+Page115 .FILL x0008
+Page116 .FILL x0008
+Page117 .FILL x0008
+Page118 .FILL x0008
+Page119 .FILL x0008
+Page120 .FILL x0008
+Page121 .FILL x0008
+Page122 .FILL x0008
+Page123 .FILL x0008
+Page124 .FILL x0008
+Page125 .FILL x0008
+
+; Valid User Pages (Stack)
+PAGE126 .FILL x3A0C  ; PFN=29, Valid=1, Unprotected=0
+
+PAGE127 .FILL x0008  ; Invalid
+
+.end
